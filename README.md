@@ -13,3 +13,8 @@ build an images 'database' from Explosm Comic Generator
 - We request rcg with 3 times the same image, to have left/center/right part the same
 - We keep the 1st and 3rd image, then we merge it to remove the watermark
 - We add a copyright on the picture
+
+# dependencies
+- php (cli)
+- imagemagick
+- curl
