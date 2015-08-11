@@ -49,10 +49,10 @@ $current = 1;
 foreach($segments as $name) {
 	printf("\r[+] cropping and merging: %.2f%%", ($current++ / $total) * 100);
 	
-	system('convert -crop 120x280+0+0   large/'.$name.'.png cropped/'.$name.'-left.png');
-	system('convert -crop 120x280+610+0 large/'.$name.'.png cropped/'.$name.'-right.png');
+	system('convert -crop 120x290+0+0   large/'.$name.'.png cropped/'.$name.'-left.png');
+	system('convert -crop 120x290+610+0 large/'.$name.'.png cropped/'.$name.'-right.png');
 	system('convert +append cropped/'.$name.'-left.png cropped/'.$name.'-right.png final/'.$name.'.png');
-	system('convert -composite -geometry +155+265 final/'.$name.'.png resources/explosm-copy.png final/'.$name.'.png');
+	system('convert -composite -geometry +85+280 final/'.$name.'.png resources/explosm-copy.png final/'.$name.'.png');
 }
 
 echo "\n[+] $total files parsed\n";
